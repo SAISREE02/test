@@ -1,0 +1,46 @@
+package calci;
+import java.util.Scanner;
+
+
+public class calci {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		double a,b;
+		System.out.println("Enter the first number");
+		a = sc.nextDouble();
+		System.out.println("Enter the second number");
+		b = sc.nextDouble();
+		System.out.println("Enter the operator (+,-,*,/,%)");
+		char c = sc.next().charAt(0);
+		double res = 0;
+		switch (c) {
+		case '+' :
+			res = a + b;
+			break;
+		case '-' :
+			res = a - b;
+			break;
+		case '*' :
+			res = a * b;
+			break;
+		case '/' :
+			res = a / b;
+			break;
+		case '%' :
+			res = a % b;
+			break;
+		default :
+			System.out.println("Wrong Choice");
+			break;
+		
+		}
+		System.out.println("Final result:");
+		System.out.println();
+		System.out.println(a + " " + c + " " + b + " = " + res);
+		
+		
+
+	}
+
+}
