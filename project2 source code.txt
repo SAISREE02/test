@@ -1,0 +1,37 @@
+package Email;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+public class EmailDemo {
+
+	public static void main(String[] args) {
+		
+		
+
+		 ArrayList<String> emailID = new ArrayList<String>();
+
+		 emailID.add("sai1@gmail.com");
+		 emailID.add("sai2@gmail.com");
+		 emailID.add("sai3@gmail.com");
+		 
+
+		 String s;
+		 System.out.println("Enter email id : ");
+		 Scanner sc = new Scanner(System.in);
+		 s = sc.nextLine();
+		 String REGEX  = "^(.+)@(.+)$";
+
+		 Matcher matcher = Pattern.compile(REGEX).matcher(s);
+
+		 if (matcher.matches() && emailID.stream().anyMatch(mail ->
+		mail.equals(s))) {
+		 System.out.println("is valid");
+		 }
+		 else {
+		 System.out.println("not valid");
+		 }
+
+		 }
+		 }
+
+	
